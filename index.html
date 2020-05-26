@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/iconToDo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>JavaScript - Cipher!</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 class="title d-flex justify-content-center mb-4">CipherKoxa</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <textarea name="cipher" id="cipher" placeholder="Напиши что нужно зашифровать/расшифровать"></textarea>
+                <div class="wrapperForDisplay">
+                    <div class="cipherMessage"></div>
+
+                    <div class="copyWrappe">
+                        <span class="copyBtn">
+                            <span class="copy" id="myTooltip">Скопировать</span>
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="buttons d-flex justify-content-between mt-3">
+                    <button class="btn button28" data-action="cipher">Зашифровать</button>
+                    <button class="btn button28" data-action="deCipher">Расшифровать</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="js/form.js"></script>
+
+</body>
+
+</html>
