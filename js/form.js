@@ -1,3 +1,36 @@
+const body = document.body;
+const copyBtn = document.querySelector('.copyWrappe');
+const colorBtn = document.querySelectorAll('.bg-color');
+
+function outFunc(e) {
+    const tooltip = document.getElementById("myTooltip");
+    tooltip.innerHTML = "Скопировать";
+}
+
+function myFunction() {
+    const cipherMessage = document.querySelector('.cipherMessage').textContent.trim();
+    navigator.clipboard.writeText(cipherMessage);
+
+    const tooltip = document.getElementById("myTooltip");
+    tooltip.innerHTML = "Текст скопирован";
+}
+
+function generationBg() {
+    return colorBtn.forEach(btn => btn.style.backgroundColor = `#${Math.floor(Math.random() * 2 ** 24).toString(16)}`);
+}
+generationBg();
+
+function bgColor(e) {
+    let color = e.target.style.backgroundColor;
+    body.style.backgroundColor = color;
+}
+
+
+copyBtn.addEventListener('click', myFunction);
+copyBtn.addEventListener('mouseleave', outFunc);
+colorBtn.forEach(btn => btn.addEventListener('click', e => bgColor(e)));
+
+
 // ШИФРОВЩИК
 class Сipher {
     constructor() {
@@ -18,7 +51,6 @@ class Сipher {
             btn.addEventListener('click', (e) => {
                 if (e.target.dataset.action === 'cipher') {
                     this.cipherString(this.cipherTextArea.value);
-                    console.log(e.target.dataset.action);
                 } else if (e.target.dataset.action === 'deCipher') {
                     this.deCipher(this.cipherTextArea.value);
                 }
@@ -63,23 +95,3 @@ class Сipher {
 
 let str = new Сipher();
 str.init();
-
-
-
-let copyBtn = document.querySelector('.copyWrappe');
-
-function outFunc(e) {
-    let tooltip = document.getElementById("myTooltip");
-    tooltip.innerHTML = "Скопировать";
-}
-
-function myFunction() {
-    let cipherMessage = document.querySelector('.cipherMessage').textContent.trim();
-    navigator.clipboard.writeText(cipherMessage);
-
-    let tooltip = document.getElementById("myTooltip");
-    tooltip.innerHTML = "Текст скопирован";
-}
-
-copyBtn.addEventListener('click', myFunction);
-copyBtn.addEventListener('mouseleave', outFunc);
