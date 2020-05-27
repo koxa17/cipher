@@ -10,14 +10,18 @@ html {
 
 body {
     padding: 0;
-    background: #7A419B;
     background-size: cover;
     font-size: 16px;
+    /* background: #145eff; */
+    /* background: linear-gradient(135deg, #145eff 0%, #145eff 21%, #a80077 55%, #a80077 55%, #a80077 77%, #db36a4 100%); */
+    background: #7A419B;
+    height: 100vh;
 }
 
 .title {
     text-shadow: rgb(5, 1, 0) 5px 5px 5px;
     color: rgb(2, 187, 2);
+    font-family: "Vibur", cursive;
 }
 
 .wrapperForDisplay {
@@ -143,4 +147,15 @@ textarea {
 .bg-color:hover {
     cursor: pointer;
     outline: 2px solid lightblue;
+}
+
+
+/*  */
+
+.text {
+    font-family: 'Chelsea Market', cursive;
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: white;
+    text-shadow: -0 -1px 0 #000000, 0 -1px 0 #000000, -0 1px 0 #000000, 0 1px 0 #000000, -1px -0 0 #000000, 1px -0 0 #000000, -1px 0 0 #000000, 1px 0 0 #000000, -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000, 1px 1px 0 #000000, -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000, 1px 1px 0 #000000;
 }
