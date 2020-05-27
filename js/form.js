@@ -160,7 +160,7 @@ const phrases = [
     'пиши о чем хочешь',
     'делись самым откровенным',
     'будь собой',
-    'твой  C i p h e r K o x a '
+    'твой CipherKoxa'
 ]
 
 const el = document.querySelector('.text')
